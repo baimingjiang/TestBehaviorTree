@@ -2,18 +2,18 @@ local testStr =
 [===[
 SEL:小怪AI
     SEQ:是否巡逻
-        CON:视野没有敌人:hasEnemyInView:false
-        ACT:左右看看:watchRound
-		ACT:开始巡逻:goOnPatrol
+        1. CON:视野没有敌人:hasEnemyInView:false
+        2. ACT:左右看看:watchRound
+		3. ACT:开始巡逻:goOnPatrol
 	SEL:攻击敌人
 		SEL:攻击敌人
 			SEQ:跑向敌人
-				CON:没有在攻击范围:hasNotEnemyInAttackRange
-				ACT:向前跑:goToEnemy 
+				1. CON:没有在攻击范围:hasNotEnemyInAttackRange
+				2. ACT:向前跑:goToEnemy 
             SEQ:开始释放技能
-                CON:打的过:isBigBoss:100
-				CON:可以释放大招:canReleaseSkill
-				ACT:释放必杀技:releaseSkill
+                1. CON:打的过:isBigBoss:100
+				2. CON:可以释放大招:canReleaseSkill
+				3. ACT:释放必杀技:releaseSkill
 		SEQ:回到阵营
 			ACT:往回走:goHome 
 ]===]
